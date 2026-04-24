@@ -1,12 +1,9 @@
-
 import 'package:auth_ui/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({
-    super.key,
-  });
-
+  const CustomButton({super.key, required this.text});
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,26 +15,23 @@ class CustomButton extends StatelessWidget {
             color: Colors.grey.shade300,
             blurRadius: 10,
             spreadRadius: 3,
-            offset: Offset(0, 2)
-          )
+            offset: Offset(0, 2),
+          ),
         ],
         borderRadius: BorderRadius.circular(5),
-        gradient: LinearGradient(colors: [
-          AppColors.primary,
-          AppColors.secondary,
-        ],
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter
-        )
+        gradient: LinearGradient(
+          colors: [AppColors.primary, AppColors.secondary],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
       ),
       child: Align(
         alignment: Alignment.center,
         child: Text(
           textAlign: TextAlign.center,
-          'LOG IN',style: TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.w500
-        ),),
+          text,
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+        ),
       ),
     );
   }
