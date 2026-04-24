@@ -1,4 +1,4 @@
-import 'package:auth_ui/screens/custom_text_feild.dart';
+import 'package:auth_ui/widgets/custom_text_feild.dart';
 import 'package:auth_ui/screens/register_screen.dart';
 import 'package:auth_ui/widgets/custom_button.dart';
 import 'package:auth_ui/widgets/logo.dart';
